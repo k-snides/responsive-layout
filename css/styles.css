@@ -2,6 +2,7 @@
 ----- Mobile First -----
 =================================================== */
 
+/* --- General Styles --- */
 * {
 	margin: 0;
 	padding: 0;
@@ -12,8 +13,21 @@ body {
 	background: yellow;
 }
 
+h2 {
+	text-transform: uppercase;
+	margin: 3em 0 2em 0;
+}
 
+/* --- Wrappers --- */
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
 
+/* --- Flexbox --- */
+.flex {
+	display: flex;
+}
 
 
 
@@ -54,6 +68,10 @@ body {
 	
 	body {
 		background: lightblue;
+	}
+
+	.wrapper {
+		max-width: 1200px;
 	}
 
 }
