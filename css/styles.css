@@ -2,7 +2,7 @@
 ----- Mobile First -----
 =================================================== */
 
-/* --- General Styles --- */
+/* ----- GENERAL STYLES ----- */
 * {
 	margin: 0;
 	padding: 0;
@@ -10,12 +10,16 @@
 }
 
 body {
-	background: yellow;
+	background-color: rgb(245, 245, 245);
 }
 
-h2 {
-	text-transform: uppercase;
-	margin: 3em 0 2em 0;
+p {
+	color: gray;
+}
+
+/* --- Images --- */
+img {
+	max-width: 100%;
 }
 
 /* --- Wrappers --- */
@@ -29,11 +33,54 @@ h2 {
 	display: flex;
 }
 
+/* ----- HEADER ----- */
+header {
+	/*text-align: center;*/
+	padding: 1em 0;
+}
+
+.main-header,
+.nav {
+	display: flex;
+	flex-direction: column;
+}
+
+.site-logo {
+	align-self: center;
+}
+
+h1 {
+	padding-bottom: 1em;
+	text-transform: capitalize;
+}
+
+h2 {
+	text-transform: uppercase;
+	margin: 3em 0 2em 0;
+	padding: 1em 0;
+}
+
+/* ----- NAVIGATION ----- */
+.main-nav ul li {
+	list-style-type: none;
+	background-color: #fff;
+	margin-bottom: 0.5em;
+	padding: 1em 0;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000;
+	/*font-weight: bold;*/
+}
 
 
-
-
-
+/* --- PORTFOLIO Section --- */
+#portfolio {
+	background-color: #fff;
+}
 
 
 
@@ -47,7 +94,22 @@ h2 {
 @media screen and (min-width: 768px) {
 	
 	body {
-		background: orange;
+		background: green;
+	}
+
+	/* ----- HEADER ----- */
+	.main-header {
+		/*justify-content: flex-end; */
+	}
+
+	/* ----- NAVIGATION ----- */
+	.main-nav .nav {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.main-nav ul li {
+		background-color: inherit;
 	}
 
 }
@@ -73,6 +135,26 @@ h2 {
 	.wrapper {
 		max-width: 1200px;
 	}
+	
+	/* ----- HEADER ----- */
+	.main-header {
+		flex-direction: row;
+	}
+
+	.site-logo {
+		margin-right: auto;
+	}
+
+	/* ----- NAVIGATION ----- */
+	.main-nav .nav {
+		align-self: center;
+	}
+
+	.nav li {
+		margin: 0 2em;
+	}
+
+
 
 }
 
