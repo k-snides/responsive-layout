@@ -220,6 +220,10 @@ footer div {
 	}
 
 	/* --- PROFILE Section --- */
+	.profile {
+		margin-top: 1em;
+	}
+
 	.profile-image {
 		padding: 0;
 	}
@@ -396,7 +400,15 @@ footer div {
 	.portfolio-image {
 		-ms-flex: 1 0 30%;
 		    flex: 1 0 30%;
-		margin: 0 0.5em;
+		margin: 0 0.5em 1em 0;
+		
+		transition: transform .3s ease-in,
+								box-shadow .3s ease-in;
+	}
+
+	.portfolio-image:hover {
+		transform: scale(1.05) translate(-1%, -1%);
+		box-shadow: 0 12px 12px -6px black;
 	}
 
 	.portfolio-image p {
@@ -420,6 +432,14 @@ footer div {
 		-ms-flex: 1 0 30%;
 		    flex: 1 0 30%;
 		margin: 0.5em;
+		
+		transition: transform .3s ease-in,
+								box-shadow .3s ease-in;
+	}
+
+	.skills-image:hover {
+		transform: scale(1.05) translate(-1%, -1%);
+		box-shadow: 0 12px 12px -6px black;
 	}
 
 	.skills-image p {
@@ -429,7 +449,7 @@ footer div {
 	.skills-image:last-child {
 		-ms-flex: 1 0 30%;
 		    flex: 1 0 30%;
-		margin: 0.5em;
+		margin-top: 0.5em;
 	}
 
 }
