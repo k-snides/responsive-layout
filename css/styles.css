@@ -100,7 +100,7 @@ a {
 }
 
 .hide-heading {
-	text-indent: -100%;
+	text-indent: 200%;
 	white-space: nowrap;
 	overflow: hidden;
 	position: absolute;
@@ -175,8 +175,8 @@ span {
 /* --- FOOTER Section --- */
 footer {
 	border-top: 1px solid lightgray;
-	width: 90%;
 	margin: 0 auto;
+	width: 90%;
 }
 
 footer h4 {
@@ -187,8 +187,8 @@ footer h4 {
 
 footer div {
 	-ms-flex-item-align: center;
-	    align-self: center;
 	font-size: 0.8em;
+	align-self: center;
 }
 
 .mobile-hide {
@@ -336,6 +336,10 @@ footer div {
 		    justify-content: space-around;
 	}
 
+	.footer-nav ul {
+		margin: -1em;
+	}
+
 	.footer-nav ul li {
 		list-style-type: none;
 		background-color: inherit;
@@ -360,7 +364,7 @@ footer div {
 	
 @media screen and (min-width: 1024px) {
 	.wrapper {
-		max-width: 1200px;
+		max-width: 1024px;
 	}
 	
 	/* ----- HEADER ----- */
