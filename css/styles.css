@@ -18,16 +18,20 @@ body {
 h1 {
 	padding: 0.5em 0 1em;
 	text-transform: capitalize;
+	font-size: 1.5em;
 }
 
 h2 {
 	text-transform: uppercase;
 	padding: 2.5em 0;
+	font-size: 1.1em;
 }
 
 h3 {
-	font-size: 1.6em;
+	font-size: 1.250em;
 	margin: 1em 0;
+	color: gray;
+	/*font-weight: 300;*/
 }
 
 h2,
@@ -38,7 +42,7 @@ p {
 
 p {
 	color: gray;
-	font-size: 1.5em;
+	font-size: 0.9em;
 }
 
 
@@ -88,47 +92,69 @@ a {
 	text-transform: uppercase;
 	color: #000;
 	font-weight: bold;
+	/*font-size: 1.2em;*/
 }
 
 /* --- PROFILE Section --- */
-#profile {
-	padding-bottom: 4em;
+.profile {
+	padding-bottom: 3em;
 }
 
 .profile-image {
-	padding: 2em 3em;
+	padding: 1.5em 2em;
 	display: block;
 	margin: 0 auto;
 }
 
-/* --- PORTFOLIO Section --- */
-#portfolio {
-	background-color: #fff;
-	padding-bottom: 4em;
+.profile-content {
+	flex-direction: column;
 }
 
-#portfolio p {
-	margin: 1em 0 2em;
+.profile p {
+	padding: 0 0.5em;
+}
+
+/* --- PORTFOLIO Section --- */
+.portfolio {
+	background-color: #fff;
+	padding-bottom: 3em;
+}
+
+.portfolio .flex {
+	flex-direction: column;
+}
+
+.portfolio p {
+	margin: 1em 0 2em 0;
 }
 
 /* --- SKILLS Section --- */
-#skills {
-	/*background-color: rgba(51, 204, 204, 0.5);	*/
-	background-color: lightblue;
-	padding-bottom: 4em;	
+.skills {
+	background-color: rgba(66, 133, 244, 1);
+	padding: 1em 0 4em 0;	
 }
 
-#skills p {
-	margin: 1em 0 2em;
+.skills,
+.skills h3,
+.skills p {
+	color: #fff;
+}
+
+.skills .flex {
+	flex-direction: column;
+}
+
+.skills p {
+	margin: 1em 0 2em 0;
 }
 
 /* --- CONTACT Section --- */
-#contact {
+.contact {
 	background-color: rgb(240, 240, 240);
-	padding-bottom: 4em;
+	padding: 1em 0 4em 0;
 }
 
-#contact p {
+.contact p {
 	margin-bottom: 1em;
 }
 
@@ -139,7 +165,7 @@ span {
 
 /* --- FOOTER Section --- */
 footer {
-	border-top: 1px solid gray;
+	border-top: 1px solid lightgray;
 	width: 90%;
 	margin: 0 auto;
 }
@@ -147,13 +173,30 @@ footer {
 footer h4 {
 	padding: 2em 0;
 	margin-right: auto;
-	font-size: 1.250em;
+	font-size: 1em;
 }
 
 footer div {
 	align-self: center;
-	font-weight: bold;
+	font-size: 0.8em;
 }
+
+.mobile-hide {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ===================================================
 ----- Tablet devices (tablets, 768px and up) -----
@@ -161,8 +204,9 @@ footer div {
 
 @media screen and (min-width: 768px) {
 	
-	body {
-		/*background: green;*/
+	/* ----- GENERAL STYLES ----- */
+	p {
+		font-size: 1em;
 	}
 
 	/* ----- HEADER ----- */
@@ -178,6 +222,122 @@ footer div {
 
 	.main-nav ul li {
 		background-color: inherit;
+	}
+
+	/* --- PROFILE Section --- */
+	.profile {
+		padding: 2em 0 4em 0;
+	}
+
+	.profile-image {
+		padding: 0;
+	}
+
+	.profile-content {
+		flex-direction: row;
+	}
+
+	.profile-content figure {
+		flex: 1 0 40%;
+		order: 2;
+	}
+
+	.profile-content p {
+		flex: 1 0 60%;
+		order: 1;
+		text-align: left;
+		padding-right: 1em;
+		font-size: 1.250em;
+	}
+
+	/* --- PORTFOLIO Section --- */
+	.portfolio {
+		padding: 1em 0 1em 0;
+	}
+
+	.portfolio .flex {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.portfolio-image {
+		flex: 1 0 40%;
+		margin: 0.5em;
+	}
+
+	.portfolio p {
+		margin: 1em 0 3em 0;
+		padding: 0 1em;
+	}
+
+	/* --- SKILLS Section --- */
+	.skills {
+		padding: 1em 0 2em 0;	
+	}
+
+	.skills .flex {
+		flex-direction: row;
+		flex-wrap: wrap;	
+	}
+
+	.skills-image {
+		flex: 1 0 40%;
+		margin: 0.5em;
+	}
+
+	.skills p {
+		margin: 1em 0 3em 0;
+		padding: 0 1em;
+	}
+
+	.skills-image:last-child {
+		flex: 0 1 48%;
+		margin: 0 0.5em 0 0.5em;
+	}
+
+	/* --- CONTACT Section --- */
+	.contact {
+		padding: 0 4.5em 4em 4.5em;
+	}
+
+	.contact p {
+		font-size: 1.250em;
+	}
+
+	.contact p:nth-child(3) {
+		margin-top: 3em;
+	}
+
+	/* --- FOOTER Section --- */
+	.desktop-hide {
+		display: none;
+	}
+
+	.mobile-hide {
+		display: flex;
+	}
+
+	footer h4 {
+		font-size: 1.250em;
+	}
+
+	.footer-nav .nav {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.footer-nav ul li {
+		list-style-type: none;
+		background-color: inherit;
+		margin-bottom: 0.5em;
+		padding: 1em 0;
+		text-align: center;
+	}
+
+	.footer-nav .nav li {
+		margin: 0 1em 0 1em;
+		font-size: 0.9em;
+		align-self: center;
 	}
 
 }
@@ -219,7 +379,7 @@ footer div {
 	}
 
 	.nav li {
-		margin: 1em 2em 0;
+		margin: 1em 2em 0 2em;
 	}
 
 
