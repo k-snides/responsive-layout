@@ -16,7 +16,6 @@ body {
 
 h1 {
 	padding: 0.5em 0 1em;
-	text-transform: capitalize;
 	font-size: 1.5em;
 }
 
@@ -76,6 +75,7 @@ header {
 .site-logo {
 	-ms-flex-item-align: center;
 	    align-self: center;
+	text-transform: capitalize;
 }
 
 /* ----- NAVIGATION ----- */
