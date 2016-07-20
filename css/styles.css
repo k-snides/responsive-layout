@@ -99,6 +99,13 @@ a {
 	padding-bottom: 3em;
 }
 
+.hide-heading {
+	text-indent: -100%;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+}
+
 .profile-image {
 	padding: 1.5em 2em;
 	display: block;
