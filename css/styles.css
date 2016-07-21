@@ -72,7 +72,7 @@ header {
 	    flex-direction: column;
 }
 
-.site-logo {
+.header-logo {
 	-ms-flex-item-align: center;
 	    align-self: center;
 	text-transform: capitalize;
@@ -108,8 +108,8 @@ a {
 
 .profile-image {
 	padding: 1.5em 2em;
-	display: block;
 	margin: 0 auto;
+	display: block;
 }
 
 .profile-content {
@@ -183,6 +183,10 @@ footer h4 {
 	padding: 2em 0;
 	margin-right: auto;
 	font-size: 1em;
+}
+
+.footer-logo {
+	margin-right: auto;
 }
 
 footer div {
@@ -374,7 +378,7 @@ footer div {
 		margin: 1.5em 0;
 	}
 
-	.site-logo {
+	.header-logo {
 		margin-right: auto;
 	}
 
@@ -384,6 +388,10 @@ footer div {
 	}
 
 	/* --- PROFILE Section --- */
+	.profile-image {
+		margin: 0 0 0 auto;
+	}
+
 	.profile p {
 		padding: 0 1.8em 0 0;
 	}
@@ -404,7 +412,7 @@ footer div {
 	.portfolio-image {
 		-ms-flex: 1 0 30%;
 		    flex: 1 0 30%;
-		margin: 0 0.5em 1em 0;
+		margin: 0 0.5em 1em 0.5em;
 		
 		transition: transform .3s ease-in,
 								box-shadow .3s ease-in;
